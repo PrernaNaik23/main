@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .sidebar {
+           
+            color: #fff;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .sidebar-title {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .sidebar-title h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar-menu {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar-menu li {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .sidebar-menu a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: grey;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar-menu a:hover {
+            color: #7C66EF;
+            
+        }
+
+        .menu-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .chat-container {
+            margin-left: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100%;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-box-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .faq-box {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: calc(33.33% - 10px);
+            box-sizing: border-box;
+        }
+
+        .faq-box h2 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .faq-box p {
+            font-size: 14px;
+        }
+
+        .greeting {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px; /* Added margin-bottom to separate from FAQ boxes */
+        }
+
+        .typing-area {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-box {
+            flex-grow: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .send-button {
+            background-color: #7C66EF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 100px 20px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar" style=" background-color: #111828;">
+        <div class="sidebar-title">
+            <h1>CoalStack</h1>
+        </div>
+        <ul class="sidebar-menu">
+            <li>
+                <img src="home.png" alt="Home" class="menu-icon">
+                <a href="assets/home.png">Home</a>
+            </li>   
+            <li>
+                <img src="clock.png" alt="Chat History" class="menu-icon">
+                <a href="assets/clock.png">Chat History</a>
+            </li>
+            <li>
+                <img src="assets/docs.png" alt="Docs" class="menu-icon">
+                <a href="assets/docs.png">Docs</a>
+            </li>   
+            <li>
+                <img src="assets/update.png" alt="Update" class="menu-icon">
+                <a href="assets/update.png">Update</a>
+            </li>
+            <li>
+                <img src="assets/Icon.png" alt="About" class="menu-icon">
+                <a href="assets/Icon.png">About</a>
+            </li>
+           
+        </ul>
+    </div>
+    <div class="chat-container">
+        <div class="greeting">
+            Good Evening Kailash,
+        </div>
+        <div class="faq-box-container">
+            <div class="faq-box">
+                <p>Who made CoalStack?</p>
+            </div>
+            <div class="faq-box">
+                
+                <p>What is CoalStack?</p>
+            </div>
+            <div class="faq-box">
+               
+                <p>What is CoalStack?</p>
+            </div>
+        </div>
+        <div class="typing-area">
+            <input type="text" class="input-box" placeholder="Type your message">
+            <button class="send-button">Send</button>
+        </div>
+    </div>
+</body>
+</html>
